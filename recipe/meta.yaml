@@ -1,5 +1,5 @@
 {% set name = "harper" %}
-{% set version = "0.8.5" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/elijah-potter/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4a616db8a304c3be3a91a41d51a729ffac07a4436955b720dd668bd30274f39e
+  sha256: 7e2dadc3e5f394f505bc2b4e05f63857b9a2f568d84fa8e403aa557f1a6d0d6e
 
 build:
   number: 0
