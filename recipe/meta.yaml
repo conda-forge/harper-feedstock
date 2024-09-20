@@ -1,5 +1,5 @@
 {% set name = "harper" %}
-{% set version = "0.8.5" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/elijah-potter/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4a616db8a304c3be3a91a41d51a729ffac07a4436955b720dd668bd30274f39e
+  sha256: ce8e10d201a00e42ba373b6531f523961518bf6090a95991dc3792a824571ad2
 
 build:
   number: 0
@@ -16,6 +16,7 @@ requirements:
   build:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - cargo-bundle-licenses
 
