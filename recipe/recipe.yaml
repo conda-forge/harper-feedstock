@@ -1,0 +1,38 @@
+context:
+  version: 0.12.0
+
+package:
+  name: harper
+  version: ${{ version }}
+
+source:
+  url: https://github.com/elijah-potter/harper/archive/v${{ version }}.tar.gz
+  sha256: 2c3f178ec147a5074f09acb81c76d7ceefa50c383081b31bcb6607b582605748
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib('c') }}
+    - cargo-bundle-licenses
+
+tests:
+  - script:
+      - harper-cli --help
+
+about:
+  license: Apache-2.0
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  summary: The Grammar Checker for Developers
+  homepage: https://github.com/elijah-potter/harper
+  repository: https://github.com/elijah-potter/harper
+
+extra:
+  recipe-maintainers:
+    - danielnachun
