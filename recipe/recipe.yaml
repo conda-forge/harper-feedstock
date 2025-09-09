@@ -1,5 +1,5 @@
 context:
-  version: "0.61.0"
+  version: "0.62.0"
 
 package:
   name: harper
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/elijah-potter/harper/archive/v${{ version }}.tar.gz
-  sha256: 9b003620c37d7dacdc26a6cbaf83ad4ab31034446a997b331acd0441f94a1336
+  sha256: 1427b543299bd99a15d0ca29a1f9ec9e301b3965af73e2c6068943c678b376d6
 
 build:
   number: 0
